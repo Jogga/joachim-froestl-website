@@ -6,23 +6,29 @@ export default ({ data }) => {
     return (
         <div>
             <h1>Hello world!</h1>
-            <h2>{ posts.totalCount } Blog Posts</h2>
+            <h2>Blog Posts</h2>
             <ul>
                 {posts.edges.map(({ node }) => (
-                    <li id={ node.id }>
+                    <li key={ node.slug }>
                         <Link to={ node.fields.slug }>
                             { node.frontmatter.title }
                         </Link>
                     </li>
                 ))}
             </ul>
+            {posts.totalCount > 3 &&
+                <Link to="/blog">More</Link>
+            }
         </div>
     )
 }
 
 export const query = graphql`
     query {
-        allMarkdownRemark {
+        allMarkdownRemark(
+                sort: { fields: [frontmatter___date], order: DESC }
+                limit: 3
+            ) {
             totalCount
             edges {
                 node {
