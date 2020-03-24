@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
+import { Page } from "../../components/Page"
 
 export default class BlogList extends React.Component {
     render() {
@@ -7,11 +8,11 @@ export default class BlogList extends React.Component {
         const { currentPage, numPages } = this.props.pageContext
         const isFirst = currentPage === 1
         const isLast = currentPage === numPages
-        const prevPage = currentPage - 1 === 1 ? "/blog/" : "/blog/"+(currentPage - 1).toString()
-        const nextPage = "/blog/"+(currentPage + 1).toString()
+        const newerPosts = currentPage - 1 === 1 ? "/blog/" : "/blog/"+(currentPage - 1).toString()
+        const olderPosts = "/blog/"+(currentPage + 1).toString()
 
         return (
-            <div>
+            <Page>
                 <h1>Blog</h1>
                 <p>{ currentPage } / { numPages }</p>
                 <ul>
@@ -21,13 +22,15 @@ export default class BlogList extends React.Component {
                     </li>
                     ))}
                 </ul>
-                {!isFirst &&
-                    <Link to={prevPage} rel="prev">←</Link>
-                }
-                {!isLast &&
-                    <Link to={nextPage} rel="next">→</Link>
-                }
-            </div>
+                <div>
+                    {!isFirst &&
+                        <Link to={newerPosts} rel="prev">Newer Posts</Link>
+                    }
+                    {!isLast &&
+                        <Link to={olderPosts} rel="next">Older Posts</Link>
+                    }
+                </div>
+            </Page>
         )
     }
 }

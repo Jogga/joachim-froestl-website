@@ -1,10 +1,11 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import { Page } from "../components/Page"
 
 export default ({ data }) => {
     const posts = data.allMarkdownRemark
     return (
-        <div>
+        <Page>
             <h1>Hello world!</h1>
             <h2>Blog Posts</h2>
             <ul>
@@ -19,7 +20,7 @@ export default ({ data }) => {
             {posts.totalCount > 3 &&
                 <Link to="/blog">More</Link>
             }
-        </div>
+        </Page>
     )
 }
 
@@ -27,7 +28,7 @@ export const query = graphql`
     query {
         allMarkdownRemark(
                 sort: { fields: [frontmatter___date], order: DESC }
-                limit: 3
+                limit: 4
             ) {
             totalCount
             edges {
