@@ -1,15 +1,15 @@
 import React from "react"
 import { Footer } from "../Footer"
 import { Header } from "../Header"
-import { Reset } from "./style"
+import { Wrapper, Reset } from "./style"
 
 export function Page ({ children }) {
     return (
-        <div>
+        <Wrapper>
             <Reset />
             <Header />
             {children}
             <Footer />
-        </div>
+        </Wrapper>
     )
 }

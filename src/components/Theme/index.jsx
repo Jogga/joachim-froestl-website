@@ -13,7 +13,11 @@ const defaultTheme = {
         '64px', // 7
         '96px', // 8
         '128px', // 9
-    ]
+    ],
+    fonts: {
+        body: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+        monospace: 'SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace',
+    },
 }
 
 export const light = { ...defaultTheme, ...lightTheme }

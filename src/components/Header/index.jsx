@@ -19,9 +19,6 @@ export function Header() {
                         activeClassName="link-active"
                         partiallyActive={true}>Blog</Link>
                 </li>
-                <li>
-                    <InactiveLink>Contact</InactiveLink>
-                </li>
             </NavLinks>
         </Container>
     )

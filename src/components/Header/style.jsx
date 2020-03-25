@@ -7,10 +7,14 @@ export const Container = styled.header`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: ${ defaultTheme.space[3] };
+    padding-top: ${ defaultTheme.space[4] };
+    padding-right: ${ defaultTheme.space[0] };
+    padding-bottom: ${ defaultTheme.space[3] };
+    padding-left: ${ defaultTheme.space[0] };
 `
 
 export const HomeLink = styled(props => <Link {...props} />)`
+    color: #222;
     text-decoration: none;
 `
 
@@ -32,6 +36,7 @@ export const NavLinks = styled.ul`
     }
 
     a {
+        color: #222;
         text-decoration: none;
     }
     a[disabled] {
