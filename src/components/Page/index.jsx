@@ -1,11 +1,13 @@
 import React from "react"
 import { Footer } from "../Footer"
-import { Nav } from "../Nav"
+import { Header } from "../Header"
+import { Reset } from "./style"
 
 export function Page ({ children }) {
     return (
-        <div style={{margin: `1rem auto`, maxWidth: 650}}>
-            <Nav />
+        <div>
+            <Reset />
+            <Header />
             {children}
             <Footer />
         </div>
