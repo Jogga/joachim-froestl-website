@@ -1,5 +1,5 @@
 ---
-title: blog post one
+title: Blog post one
 date: 2019-10-1
 ---
 

@@ -11,6 +11,7 @@ export const Container = styled.footer`
     display: flex;
     position: relative;
     justify-content: space-between;
+    font-size: ${ defaultTheme.fontSizes[0] };
 `
 export const ScrollButton = styled.button`
     position: absolute;

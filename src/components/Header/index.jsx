@@ -6,6 +6,7 @@ export function Header() {
     return(
         <Container>
             <HomeLink to="/">Joachim Fröstl</HomeLink>
+            {/*
             <NavLinks>
                 <li>
                     <InactiveLink>About</InactiveLink>
@@ -20,6 +21,7 @@ export function Header() {
                         partiallyActive={true}>Blog</Link>
                 </li>
             </NavLinks>
+            */}
         </Container>
     )
 }

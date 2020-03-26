@@ -18,6 +18,15 @@ const defaultTheme = {
         body: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
         monospace: 'SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace',
     },
+    fontSizes: [
+        '0.8rem', // 0
+        '1rem', // 1
+        '1.2rem', // 2
+        '1.5rem', // 3
+        '1.875rem', // 4
+        '2.25rem', // 5
+        '2.75rem', // 6
+    ],
 }
 
 export const light = { ...defaultTheme, ...lightTheme }
