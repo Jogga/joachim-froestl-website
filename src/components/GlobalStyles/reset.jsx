@@ -5,6 +5,7 @@ const ResetStyles = createGlobalStyle`
     html {
         font-family: ${ defaultTheme.fonts.body };
         font-size: 18px;
+        line-height: 1.6;
         background-color: ${(props) => props.theme.bg.primary};
         color: ${(props) => props.theme.text.primary};
     }

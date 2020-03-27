@@ -2,16 +2,16 @@ import React from "react"
 import { Footer } from "../Footer"
 import { Header } from "../Header"
 import Providers from "../Providers"
-import { Wrapper } from "./style"
+import Layout from "../Layout"
 
-export function Page ({ children }) {
+export default function Page ({ children }) {
     return (
         <Providers>
-            <Wrapper>
+            <Layout.Centered>
                 <Header />
                 {children}
                 <Footer />
-            </Wrapper>
+            </Layout.Centered>
         </Providers>
     )
 }

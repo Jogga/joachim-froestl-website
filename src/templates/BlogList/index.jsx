@@ -1,10 +1,14 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import { Page } from "../../components/Page"
+import Page from "../../components/Page"
+import Layout from '../../components/Layout'
+import BlogPostList from '../../components/BlogPostList'
+import { H1 } from '../../components/Typography'
+import defaultTheme from '../../components/Theme'
 
 export default class BlogList extends React.Component {
     render() {
-        const posts = this.props.data.allMarkdownRemark.edges
+        const posts = this.props.data.allMarkdownRemark
         const { currentPage, numPages } = this.props.pageContext
         const isFirst = currentPage === 1
         const isLast = currentPage === numPages
@@ -13,23 +17,21 @@ export default class BlogList extends React.Component {
 
         return (
             <Page>
-                <h1>Blog</h1>
-                <p>{ currentPage } / { numPages }</p>
-                <ul>
-                    { posts.map(({ node }) => (
-                    <li>
-                        <Link to={ node.fields.slug }>{ node.frontmatter.title }</Link>
-                    </li>
-                    ))}
-                </ul>
-                <div>
+                <Layout.Padded>
+                    <H1 style={{ marginBottom: defaultTheme.space[3] }}>Blog</H1>
+                </Layout.Padded>
+                <BlogPostList posts={posts} />
+                {/*
+                <Layout.Padded>
+                    <p>{ currentPage } / { numPages }</p>
                     {!isFirst &&
                         <Link to={newerPosts} rel="prev">Newer Posts</Link>
                     }
                     {!isLast &&
                         <Link to={olderPosts} rel="next">Older Posts</Link>
                     }
-                </div>
+                </Layout.Padded>
+                */}
             </Page>
         )
     }
@@ -48,6 +50,7 @@ export const blogListQuery = graphql`
                         title
                         date
                     }
+                    excerpt
                     fields {
                         slug
                     }

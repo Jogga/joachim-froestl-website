@@ -1,6 +1,6 @@
 ---
-title: blog post four
-date: 2019-10-4
+title: "blog post four"
+date: "2020-03-04"
 ---
 
 I was dreaming about cake

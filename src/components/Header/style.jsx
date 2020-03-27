@@ -7,15 +7,19 @@ export const Container = styled.header`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-top: ${ defaultTheme.space[4] };
-    padding-right: ${ defaultTheme.space[0] };
+    padding-top: ${ defaultTheme.space[3] };
+    padding-right: ${ defaultTheme.space[5] };
     padding-bottom: ${ defaultTheme.space[3] };
-    padding-left: ${ defaultTheme.space[0] };
+    padding-left: ${ defaultTheme.space[5] };
 `
 
 export const HomeLink = styled(props => <Link {...props} />)`
-    color: #222;
+    color: ${ (props) => props.theme.text.primary };
     text-decoration: none;
+
+    &:hover{
+        color: ${ (props) => props.theme.text.accent };
+    }
 `
 
 export const NavLinks = styled.ul`

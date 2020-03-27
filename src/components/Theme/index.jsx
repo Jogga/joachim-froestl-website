@@ -27,6 +27,19 @@ const defaultTheme = {
         '2.25rem', // 5
         '2.75rem', // 6
     ],
+    fontWeights: {
+        body: 400,
+        heading: 700,
+    },
+    lineHeights: {
+        body: 1.6,
+        heading: 1.2,
+        code: 1.6,
+    },
+    borderRadius: [
+        '6px',
+        '12px',
+    ]
 }
 
 export const light = { ...defaultTheme, ...lightTheme }

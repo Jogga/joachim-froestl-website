@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Page } from "../../components/Page"
+import Page from "../../components/Page"
 
 export default ({ data }) => {
     const post = data.markdownRemark

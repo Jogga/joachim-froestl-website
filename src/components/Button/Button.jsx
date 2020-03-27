@@ -1,6 +1,7 @@
 import React from "react"
-import * as Styled from './style'
+import { Button } from './style'
 
-export default function Button({children }) {
-    return <Styled.Button>{children}</Styled.Button>
+export default function Btn (props) {
+    const { children } = props
+    return <Button { ...props }>{children}</Button>
   }

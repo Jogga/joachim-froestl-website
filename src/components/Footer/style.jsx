@@ -6,20 +6,12 @@ import { Link } from "gatsby"
 export const Container = styled.footer`
     padding-top: ${ defaultTheme.space[6] };
     padding-bottom: ${ defaultTheme.space[7] };
-    padding-left: ${ defaultTheme.space[0] };
-    padding-right: ${ defaultTheme.space[0] };
+    padding-left: ${ defaultTheme.space[5] };
+    padding-right: ${ defaultTheme.space[5] };
     display: flex;
     position: relative;
     justify-content: space-between;
     font-size: ${ defaultTheme.fontSizes[0] };
-`
-export const ScrollButton = styled.button`
-    position: absolute;
-    background: #222;
-    color: #eee;
-    border: none;
-    padding: ${ defaultTheme.space[2] };
-    right: ${ defaultTheme.space[2] };
 `
 export const SocialLinks = styled.ul`
     list-style-type: none;
@@ -34,7 +26,11 @@ export const SocialLinks = styled.ul`
 
 const baseLink = css`
     text-decoration: none;
-    color: #555;
+    color: ${ (props) => props.theme.text.secondary };
+
+    &:hover {
+        color: ${ (props) => props.theme.text.accent };
+    }
 `
 
 export const SocialLink = styled.a`

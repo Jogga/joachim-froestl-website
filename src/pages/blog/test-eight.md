@@ -1,6 +1,6 @@
 ---
-title: blog post eight
-date: 2019-10-8
+title: "I’m here to blog"
+date: "2019-10-08"
 ---
 
 I was dreaming about salad paragraph
