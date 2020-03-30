@@ -6,8 +6,8 @@
 
 module.exports = {
   siteMetadata: {
-    title: `Joachim Fröstl, Product Designer`,
-    description: `test`,
+    title: `Joachim Fröstl`,
+    description: `I’m a product designer solving complex problems through curiosity, empathy, and craft.`,
     author: `Joachim Fröstl`,
     keywords: [`Product Design`, `UX`, `UI`, `Web`, `App`, `UX Research`, `Human centered design`, `User Experience`, `Berlin`],
     siteUrl: `https://joachimfroestl.com/`,

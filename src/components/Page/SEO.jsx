@@ -30,7 +30,7 @@ function SEO({ description, title, path }) {
             }}
             defaultTitle={ site.siteMetadata.title }
             title={ title }
-            titleTemplate={`%s - ${site.siteMetadata.author}`}
+            titleTemplate={`%s - ${ site.siteMetadata.title }`}
             link={
               canonical
                 ? [
