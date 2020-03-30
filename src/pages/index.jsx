@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import styled from 'styled-components'
 import Page from '../components/Page'
 import { ButtonLink, ButtonPrimary } from '../components/Button'
 import { PaddedContainer } from '../components/Layout'
@@ -14,11 +15,18 @@ export default ({ data }) => {
         console.log('hello there')
         window.location.href = 'mailto:mail@example.org'
     }
+
+    const Title = styled(H1)`
+        font-size: ${ defaultTheme.fontSizes[3] };
+        @media (min-width: ${ defaultTheme.breakPoints[0] }) {
+            font-size: ${ defaultTheme.fontSizes[5] };
+        }
+    `
     
     return (
         <Page>
             <PaddedContainer style={{ marginBottom: defaultTheme.space[8] }}>                
-                <H1 style={{ marginBottom: defaultTheme.space[4] }}>I’m a product designer solving complex problems through curiosity, empathy, and craft.</H1>
+                <Title style={{ marginBottom: defaultTheme.space[4] }}>I’m a product designer solving complex problems through curiosity, empathy, and craft.</Title>
                 <ButtonPrimary onClick={handleClick}>Reach out</ButtonPrimary>
             </PaddedContainer>
             <PaddedContainer>
