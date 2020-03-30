@@ -24,7 +24,7 @@ export default ({ data }) => {
     `
     
     return (
-        <Page>
+        <Page seo={{ path: '/' }}>
             <PaddedContainer style={{ marginBottom: defaultTheme.space[8] }}>                
                 <Title style={{ marginBottom: defaultTheme.space[4] }}>I’m a product designer solving complex problems through curiosity, empathy, and craft.</Title>
                 <ButtonPrimary onClick={handleClick}>Reach out</ButtonPrimary>

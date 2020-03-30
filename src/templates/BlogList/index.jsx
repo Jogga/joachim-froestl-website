@@ -19,7 +19,7 @@ export default class BlogList extends React.Component {
         */
 
         return (
-            <Page>
+            <Page seo={{ title: `Blog`}}>
                 <PaddedContainer>
                     <H1 style={{ marginBottom: defaultTheme.space[3] }}>Blog</H1>
                 </PaddedContainer>
