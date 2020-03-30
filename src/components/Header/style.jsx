@@ -2,15 +2,15 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 import React from "react"
 import defaultTheme from '../Theme'
+import { paddedContainer } from '../Layout'
 
 export const Container = styled.header`
+    ${ paddedContainer };
+    padding-top: ${ defaultTheme.space[3] };
+    padding-bottom: ${ defaultTheme.space[3] };
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-top: ${ defaultTheme.space[3] };
-    padding-right: ${ defaultTheme.space[5] };
-    padding-bottom: ${ defaultTheme.space[3] };
-    padding-left: ${ defaultTheme.space[5] };
 `
 
 export const HomeLink = styled(props => <Link {...props} />)`

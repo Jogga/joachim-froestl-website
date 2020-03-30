@@ -1,14 +1,15 @@
 export default {
     bg: {
-        primary: '#050505',
-        secondary: '#111112',
+        primary: '#101014',
+        secondary: '#1b1b20',
         accent: '#F66',
         accentActive: '#F44'
     },
     text: {
-        primary: '#f7f7f7',
-        secondary: '#a7a7a7',
+        primary: '#d7d7df',
+        secondary: '#808087',
         accent: '#F66',
+        accentActive: '#F44',
         negative: '#050505',
     },
 }

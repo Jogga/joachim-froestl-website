@@ -11,7 +11,7 @@ const defaultTheme = {
         '32px', // 5
         '48px', // 6
         '64px', // 7
-        '96px', // 8
+        '88px', // 8
         '128px', // 9
     ],
     fonts: {
@@ -37,9 +37,14 @@ const defaultTheme = {
         code: 1.6,
     },
     borderRadius: [
+        '0px',
         '6px',
         '12px',
-    ]
+    ],
+    contentWidth: '640px',
+    breakPoints: [
+        '640px',
+    ],
 }
 
 export const light = { ...defaultTheme, ...lightTheme }

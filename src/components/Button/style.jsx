@@ -10,7 +10,7 @@ const buttonBase = css`
     padding-right: ${ defaultTheme.space[4] };
     padding-bottom: ${ defaultTheme.space[2] };
     padding-left: ${ defaultTheme.space[4] };
-    border-radius: ${ defaultTheme.borderRadius[0] };
+    border-radius: ${ defaultTheme.borderRadius[1] };
     font-size: ${ defaultTheme.fontSizes[0] };
     border: 2px solid ${ (props) => props.theme.text.accent };
     cursor: pointer;

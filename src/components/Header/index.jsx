@@ -1,6 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
-import { Container, HomeLink, NavLinks, InactiveLink } from "./style"
+import { Container, HomeLink } from "./style"
 
 export function Header() {
     return(

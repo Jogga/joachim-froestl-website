@@ -3,11 +3,13 @@ import defaultTheme from "../Theme"
 
 const ResetStyles = createGlobalStyle`
     html {
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
         font-family: ${ defaultTheme.fonts.body };
-        font-size: 18px;
-        line-height: 1.6;
+        line-height: ${ defaultTheme.lineHeights.body };
         background-color: ${(props) => props.theme.bg.primary};
         color: ${(props) => props.theme.text.primary};
+        font-size: 18px;
     }
     body {
         margin: 0;

@@ -15,22 +15,29 @@ export const BlogPostLink = styled(props => <Link {...props} />)`
     text-decoration: none;
     display: block;
     padding-top: ${ defaultTheme.space[4] };
-    padding-right: ${ defaultTheme.space[5] };
+    padding-right: ${ defaultTheme.space[3] };
     padding-bottom: ${ defaultTheme.space[4] };
-    padding-left: ${ defaultTheme.space[5] };
-    margin-top: ${defaultTheme.space[0] };
+    padding-left: ${ defaultTheme.space[3] };
+    margin-top: ${ defaultTheme.space[0] };
     margin-bottom: ${defaultTheme.space[0] };
-    border-radius: ${ defaultTheme.borderRadius[1] };
-
+    border-radius: ${ defaultTheme.borderRadius[0] };
+    
     &:hover {
         background: ${ (props) => props.theme.bg.secondary };
+    }
+    
+    @media(min-width: ${ defaultTheme.breakPoints[0] }) {
+        border-radius: ${ defaultTheme.borderRadius[2] };
+        padding-right: ${ defaultTheme.space[5] };
+        padding-left: ${ defaultTheme.space[5] };
     }
 `
 
 export const BlogPostTitle = styled.h3`
+    ${ h3 };
     margin-top: ${ defaultTheme.space[0] };
     margin-bottom: ${ defaultTheme.space[1] };
-    ${ h3 }
+    font-size: ${ defaultTheme.fontSizes[2] };
 `
 export const BlogPostDate = styled.p`
     font-size: ${ defaultTheme.fontSizes[0] };

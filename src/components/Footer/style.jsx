@@ -2,12 +2,12 @@ import styled, { css } from "styled-components"
 import defaultTheme from "../Theme"
 import React from "react"
 import { Link } from "gatsby"
+import { paddedContainer } from '../Layout'
 
 export const Container = styled.footer`
+    ${ paddedContainer };
     padding-top: ${ defaultTheme.space[6] };
-    padding-bottom: ${ defaultTheme.space[7] };
-    padding-left: ${ defaultTheme.space[5] };
-    padding-right: ${ defaultTheme.space[5] };
+    padding-bottom: ${ defaultTheme.space[4] };
     display: flex;
     position: relative;
     justify-content: space-between;
