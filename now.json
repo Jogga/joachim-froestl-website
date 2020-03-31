@@ -1,0 +1,8 @@
+{
+    "build": {
+        "env": {
+            "CONTACT_EMAIL": "@contact-email",
+            "FATHOM_SITE_ID": "@fathom-site-id"
+        }
+    }
+}
