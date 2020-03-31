@@ -7,7 +7,7 @@ import { Button } from '../../components/Button'
 export default () => {
 
     function handleClick(e) {
-        window.location.href = `mailto:${process.env.CONTACT_EMAIL}`
+        window.location.href = `mailto:${process.env.GATSBY_CONTACT_EMAIL}`
     }
 
     return (
