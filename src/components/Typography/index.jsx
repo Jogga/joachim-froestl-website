@@ -8,8 +8,8 @@ const heading = css`
 
 export const h1 = css`
     ${ heading };
-    margin-top: ${ defaultTheme.space[1] };
-    margin-bottom: ${ defaultTheme.space[6] };
+    margin-top: ${ defaultTheme.space[7] };
+    margin-bottom: ${ defaultTheme.space[3] };
     font-size: ${ defaultTheme.fontSizes[5] };
 `
 
