@@ -4,6 +4,10 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Joachim Fröstl, Product Designer`,
@@ -19,6 +23,12 @@ module.exports = {
       options: {
         name: `src`,
         path: `${__dirname}/src/`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-fathom`,
+      options: {
+        siteId: process.env.FATHOM_SITE_ID,
       },
     },
     `gatsby-transformer-remark`,

@@ -8,21 +8,20 @@ import BlogPostList from '../components/BlogPostList'
 import { H1, H2 } from '../components/Typography'
 import defaultTheme from '../components/Theme'
 
+const Title = styled(H1)`
+    font-size: ${ defaultTheme.fontSizes[3] };
+    @media (min-width: ${ defaultTheme.breakPoints[0] }) {
+        font-size: ${ defaultTheme.fontSizes[5] };
+    }
+`
+
 export default ({ data }) => {
     const posts = data.allMarkdownRemark
 
     function handleClick(e) {
-        console.log('hello there')
-        window.location.href = 'mailto:mail@example.org'
+        window.location.href = `mailto:${process.env.CONTACT_EMAIL}`
     }
 
-    const Title = styled(H1)`
-        font-size: ${ defaultTheme.fontSizes[3] };
-        @media (min-width: ${ defaultTheme.breakPoints[0] }) {
-            font-size: ${ defaultTheme.fontSizes[5] };
-        }
-    `
-    
     return (
         <Page seo={{ path: '/' }}>
             <PaddedContainer style={{ marginBottom: defaultTheme.space[8] }}>                
