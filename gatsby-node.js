@@ -13,7 +13,13 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     }
 }
 
+require('dotenv').config({
+    path: `.env.${process.env.NODE_ENV}`,
+})
+
 exports.createPages = async ({ graphql, actions, reporter }) => {
+    console.log(process.env.FATHOM_SITE_ID || "nope")
+    console.log(process.env.CONTACT_EMAIL || "nein")
     const { createPage } = actions
     const result = await graphql(`
         query {
