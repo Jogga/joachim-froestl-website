@@ -19,7 +19,7 @@ export default ({ data }) => {
     const posts = data.allMarkdownRemark
 
     function handleClick(e) {
-        window.location.href = `mailto:${process.env.CONTACT_EMAIL}`
+        window.location.href = `mailto:${process.env.GATSBY_CONTACT_EMAIL}`
     }
 
     return (
